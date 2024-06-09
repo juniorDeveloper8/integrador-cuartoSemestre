@@ -1,13 +1,18 @@
 package com.citasMedicas.Services;
 
+import com.citasMedicas.Entities.TipoAtencion;
+
+import java.util.List;
+
 public interface ITipoAtencionService {
-    /*
-    List<Student> findAll();
 
-    Student findById(Integer id);
+    List<TipoAtencion> findAll();
 
-    void save(Student student);
+    TipoAtencion findById(Integer id);
 
-    List<Student> findByIdCourse(Integer idCourser);
-     */
+    void save(TipoAtencion tipoAtencion);
+
+    void update(Integer id, TipoAtencion tipoAtencion);
+
+    void deleteById(Integer id);
 }
