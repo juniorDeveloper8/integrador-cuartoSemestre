@@ -12,7 +12,5 @@ public interface IHistorialClinicoService {
 
     void save(HistorialClinico historialClinico);
 
-    void update(Integer id, HistorialClinico historialClinico);
-
     void deleteById(Integer id);
 }

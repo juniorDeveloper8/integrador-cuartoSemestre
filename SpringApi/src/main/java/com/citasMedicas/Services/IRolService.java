@@ -11,7 +11,5 @@ public interface IRolService {
 
     void save(Rol rol);
 
-    void update(Integer id, Rol rol);
-
     void deleteById(Integer id);
 }

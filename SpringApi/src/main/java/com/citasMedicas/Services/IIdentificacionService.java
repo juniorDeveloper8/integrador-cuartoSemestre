@@ -12,7 +12,5 @@ public interface IIdentificacionService {
 
     void save(Identificacion identificacion);
 
-    void update(Integer id, Identificacion identificacion);
-
     void deleteById(Integer id);
 }

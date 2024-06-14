@@ -30,11 +30,6 @@ public class UserServiceImplements implements IUserService {
     }
 
     @Override
-    public void update(Integer id, User user) {
-        //integrar logica con dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         userRepository.deleteById(id);
     }

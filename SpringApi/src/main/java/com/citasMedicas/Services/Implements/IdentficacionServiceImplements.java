@@ -30,11 +30,6 @@ public class IdentficacionServiceImplements implements IIdentificacionService {
     }
 
     @Override
-    public void update(Integer id, Identificacion identificacion) {
-// falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         identificacionRepository.deleteById(id);
     }

@@ -30,11 +30,6 @@ public class EspecialidadServiceImplements implements IEspecialidadService {
     }
 
     @Override
-    public void update(Integer id, Especialdad especialdad) {
-        //falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         especialidadRepository.deleteById(id);
     }

@@ -12,7 +12,5 @@ public interface IConsultorioService {
 
     void save(Consultorio consultorio);
 
-    void update(Integer id, Consultorio consultorio);
-
     void deleteById(Integer id);
 }

@@ -12,7 +12,5 @@ public interface IDocEspecialidadService {
 
     void save(DocEspecialidad docEspecialidad);
 
-    void uptade(Integer id,DocEspecialidad docEspecialidad);
-
     void deleteById(Integer id);
 }

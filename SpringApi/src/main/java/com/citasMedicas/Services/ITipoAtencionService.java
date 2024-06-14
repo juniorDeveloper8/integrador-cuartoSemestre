@@ -12,7 +12,5 @@ public interface ITipoAtencionService {
 
     void save(TipoAtencion tipoAtencion);
 
-    void update(Integer id, TipoAtencion tipoAtencion);
-
     void deleteById(Integer id);
 }

@@ -11,7 +11,5 @@ public interface IUserService {
 
     void save(User user);
 
-    void update(Integer id, User user);
-
     void deleteById(Integer id);
 }

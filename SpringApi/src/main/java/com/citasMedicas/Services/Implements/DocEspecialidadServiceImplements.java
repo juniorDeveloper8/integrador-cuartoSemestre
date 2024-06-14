@@ -30,11 +30,6 @@ public class DocEspecialidadServiceImplements implements IDocEspecialidadService
     }
 
     @Override
-    public void uptade(Integer id, DocEspecialidad docEspecialidad) {
-// falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         docEspecialidadRepository.deleteById(id);
     }

@@ -30,11 +30,6 @@ public class HistorialClinicoServiceImplements implements IHistorialClinicoServi
     }
 
     @Override
-    public void update(Integer id, HistorialClinico historialClinico) {
-        //falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         historialClinicoRepository.deleteById(id);
     }

@@ -30,11 +30,6 @@ public class RolServiceImplements implements IRolService {
     }
 
     @Override
-    public void update(Integer id, Rol rol) {
-        // toca crear el dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         rolRepository.deleteById(id);
     }

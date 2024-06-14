@@ -30,11 +30,6 @@ public class CitaServiceImplements implements ICitaService {
     }
 
     @Override
-    public void update(Integer id, Cita cita) {
-// falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         citaRepository.deleteById(id);
     }

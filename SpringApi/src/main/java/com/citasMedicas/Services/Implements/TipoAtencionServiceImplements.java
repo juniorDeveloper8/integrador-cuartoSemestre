@@ -30,11 +30,6 @@ public class TipoAtencionServiceImplements implements ITipoAtencionService {
     }
 
     @Override
-    public void update(Integer id, TipoAtencion tipoAtencion) {
-// toca agregar los dto primero
-    }
-
-    @Override
     public void deleteById(Integer id) {
         tipoAtencionRepository.deleteById(id);
     }

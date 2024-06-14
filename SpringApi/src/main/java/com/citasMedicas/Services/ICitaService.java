@@ -12,7 +12,5 @@ public interface ICitaService {
 
     void save(Cita cita);
 
-    void update(Integer id, Cita cita);
-
     void deleteById(Integer id);
 }

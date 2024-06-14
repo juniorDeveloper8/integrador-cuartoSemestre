@@ -30,11 +30,6 @@ public class ConsultorioServiceImplements implements IConsultorioService {
     }
 
     @Override
-    public void update(Integer id, Consultorio consultorio) {
-// falta dto
-    }
-
-    @Override
     public void deleteById(Integer id) {
         consultorioRepository.deleteById(id);
     }
