@@ -2,6 +2,7 @@ package com.citasMedicas.DTO;
 
 import com.citasMedicas.Entities.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -18,5 +19,5 @@ public class DTOIdentificacion {
     private boolean tipoDni;
     private String dni;
 
-    private List<User> userList;
+    private List<User> userList = new ArrayList<>();
 }

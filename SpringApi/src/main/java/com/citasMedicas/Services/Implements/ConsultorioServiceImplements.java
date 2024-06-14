@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ConsultorioServiceImplements implements IConsultorioService {
@@ -20,8 +21,8 @@ public class ConsultorioServiceImplements implements IConsultorioService {
     }
 
     @Override
-    public Consultorio findById(Integer id) {
-        return consultorioRepository.findById(id).orElseThrow();
+    public Optional<Consultorio> findById(Integer id) {
+        return consultorioRepository.findById(id);
     }
 
     @Override

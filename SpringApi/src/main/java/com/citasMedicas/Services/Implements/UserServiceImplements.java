@@ -1,5 +1,6 @@
 package com.citasMedicas.Services.Implements;
 
+import com.citasMedicas.DTO.DTOUser;
 import com.citasMedicas.Entities.User;
 import com.citasMedicas.Repositories.IUserRepository;
 import com.citasMedicas.Services.IUserService;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImplements implements IUserService {
@@ -20,8 +22,8 @@ public class UserServiceImplements implements IUserService {
     }
 
     @Override
-    public User findById(Integer id) {
-        return userRepository.findById(id).orElseThrow();
+    public Optional<User> findById(Integer id) {
+        return userRepository.findById(id);
     }
 
     @Override

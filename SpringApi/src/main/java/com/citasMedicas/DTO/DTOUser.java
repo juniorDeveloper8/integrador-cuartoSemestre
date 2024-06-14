@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -21,8 +22,8 @@ public class DTOUser {
     private Rol rol;
     private Identificacion identificacion;
 
-    private List<DocEspecialidad> docEspecialidadList;
-    private List<Cita> citaList;
-    private List<HistorialClinico> historialClinicoList;
+    private List<DocEspecialidad> docEspecialidadList = new ArrayList<>();
+    private List<Cita> citaList = new ArrayList<>();
+    private List<HistorialClinico> historialClinicoList = new ArrayList<>();
 
 }

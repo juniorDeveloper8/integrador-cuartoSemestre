@@ -2,6 +2,7 @@ package com.citasMedicas.DTO;
 
 import com.citasMedicas.Entities.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +19,6 @@ public class DTORol {
    private boolean tipo;
    private String descripcion;
 
-   private List<User> userList;
+   private List<User> userList = new ArrayList<>();
 
 }

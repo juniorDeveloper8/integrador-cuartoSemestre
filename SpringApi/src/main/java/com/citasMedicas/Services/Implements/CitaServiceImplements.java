@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CitaServiceImplements implements ICitaService {
@@ -20,8 +21,8 @@ public class CitaServiceImplements implements ICitaService {
     }
 
     @Override
-    public Cita findById(Integer id) {
-        return citaRepository.findById(id).orElseThrow();
+    public Optional<Cita> findById(Integer id) {
+        return citaRepository.findById(id);
     }
 
     @Override

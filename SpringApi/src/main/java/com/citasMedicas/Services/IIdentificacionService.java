@@ -3,12 +3,13 @@ package com.citasMedicas.Services;
 import com.citasMedicas.Entities.Identificacion;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IIdentificacionService {
 
     List<Identificacion> findAll();
 
-    Identificacion findById(Integer id);
+   Optional<Identificacion> findById(Integer id);
 
     void save(Identificacion identificacion);
 

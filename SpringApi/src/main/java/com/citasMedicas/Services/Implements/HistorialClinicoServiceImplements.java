@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HistorialClinicoServiceImplements implements IHistorialClinicoService {
@@ -20,8 +21,8 @@ public class HistorialClinicoServiceImplements implements IHistorialClinicoServi
     }
 
     @Override
-    public HistorialClinico findById(Integer id) {
-        return historialClinicoRepository.findById(id).orElseThrow();
+    public Optional<HistorialClinico> findById(Integer id) {
+        return historialClinicoRepository.findById(id);
     }
 
     @Override

@@ -3,12 +3,13 @@ package com.citasMedicas.Services;
 import com.citasMedicas.Entities.Cita;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ICitaService {
 
     List<Cita> findAll();
 
-    Cita findById(Integer id);
+    Optional<Cita> findById(Integer id);
 
     void save(Cita cita);
 

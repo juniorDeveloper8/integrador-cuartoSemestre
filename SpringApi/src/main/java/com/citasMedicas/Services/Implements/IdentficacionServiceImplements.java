@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class IdentficacionServiceImplements implements IIdentificacionService {
@@ -20,8 +21,8 @@ public class IdentficacionServiceImplements implements IIdentificacionService {
     }
 
     @Override
-    public Identificacion findById(Integer id) {
-        return identificacionRepository.findById(id).orElseThrow();
+    public Optional<Identificacion> findById(Integer id) {
+        return identificacionRepository.findById(id);
     }
 
     @Override

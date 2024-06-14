@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EspecialidadServiceImplements implements IEspecialidadService {
@@ -20,8 +21,8 @@ public class EspecialidadServiceImplements implements IEspecialidadService {
     }
 
     @Override
-    public Especialdad findById(Integer id) {
-        return especialidadRepository.findById(id).orElseThrow();
+    public Optional<Especialdad> findById(Integer id) {
+        return especialidadRepository.findById(id);
     }
 
     @Override

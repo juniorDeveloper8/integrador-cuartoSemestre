@@ -2,6 +2,7 @@ package com.citasMedicas.DTO;
 
 import com.citasMedicas.Entities.DocEspecialidad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -20,6 +21,6 @@ public class DTOEspecialidad {
     private Integer eAge;
     private boolean eStatus;
 
-    private List<DocEspecialidad> docEspecialidadList;
+    private List<DocEspecialidad> docEspecialidadList = new ArrayList<>();
 
 }

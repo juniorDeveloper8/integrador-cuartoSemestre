@@ -5,6 +5,7 @@ import com.citasMedicas.Entities.Consultorio;
 import com.citasMedicas.Entities.TipoAtencion;
 import com.citasMedicas.Entities.User;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,8 +24,8 @@ public class DTOHistorialClinico {
     private Integer age;
 
     private User user;
-    private List<Consultorio> consultorios;
+    private List<Consultorio> consultorios = new ArrayList<>();
 
-    private List<Cita> citas;
-    private List<TipoAtencion> tipoAtencionList;
+    private List<Cita> citas = new ArrayList<>();
+    private List<TipoAtencion> tipoAtencionList = new ArrayList<>();
 }
