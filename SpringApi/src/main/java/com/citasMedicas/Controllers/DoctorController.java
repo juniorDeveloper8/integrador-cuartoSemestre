@@ -14,14 +14,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-public class UserController {
+public class DoctorController {
 
     @Autowired
     private IUserService userService;
 
-
-    @GetMapping(value = "/user/{id}")
-    public ResponseEntity<?> findByIdUser(@PathVariable Integer id) {
+    @GetMapping(value = "/doctor/{id}")
+    public ResponseEntity<?> findByIdDoctor(@PathVariable Integer id) {
         Optional<User> userOptional = userService.findById(id);
 
         if(userOptional.isPresent()) {
@@ -32,14 +31,11 @@ public class UserController {
                     .uApellido(user.getUApellido())
                     .uCorreo(user.getUCorreo())
                     .identificacion(user.getIdentificacion())
-                    .citaList(user.getCitaList())
-                    .historialClinicoList(user.getHistorialClinicoList())
+                    .docEspecialidadList(user.getDocEspecialidadList())
                     .build();
 
             return ResponseEntity.ok(dtoUser);
         }
         return ResponseEntity.notFound().build();
     }
-
-
 }
