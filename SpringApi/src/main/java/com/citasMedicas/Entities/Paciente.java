@@ -59,4 +59,8 @@ public class Paciente {
 
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Cita> citaList = new ArrayList<>();
+
+    public void desactivarPaciente() {
+        this.activo = false;
+    }
 }

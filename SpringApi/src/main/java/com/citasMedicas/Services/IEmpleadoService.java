@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IEmpleadoService {
 
-    List<Empleado> findAll();
+    List<Empleado> findByActivoTrue();
 
     Optional<Empleado> findById(Integer id);
 

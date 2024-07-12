@@ -37,4 +37,8 @@ public class Cita {
     @JoinColumn(name = "id_co")
     @JsonIgnore
     private Consultorio consultorio;
+
+    public void desactivarCita() {
+        this.activo = false;
+    }
 }

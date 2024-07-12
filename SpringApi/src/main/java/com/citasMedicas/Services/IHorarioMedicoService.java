@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IHorarioMedicoService {
 
-    List<HorarioMedico> findAll();
+    List<HorarioMedico> findByEstHorario(boolean estHorario);
 
     Optional<HorarioMedico> findById(Integer id);
 

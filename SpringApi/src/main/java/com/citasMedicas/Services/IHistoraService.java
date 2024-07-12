@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IHistoraService {
 
-    List<Historia> findAll();
+    List<Historia> findByActivoTrue();
 
     Optional<Historia> findById(Integer id);
 

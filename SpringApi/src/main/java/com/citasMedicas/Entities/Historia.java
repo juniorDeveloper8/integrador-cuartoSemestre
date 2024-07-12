@@ -55,4 +55,7 @@ public class Historia {
     @JsonIgnore
     private Paciente paciente;
 
+    public void desactivarHistoria() {
+        this.activo = false;
+    }
 }

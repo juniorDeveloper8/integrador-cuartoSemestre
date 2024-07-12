@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ICitaService {
 
-    List<Cita> findAll();
+    List<Cita> findByActivoTrue();
 
     Optional<Cita> findById(Integer id);
 

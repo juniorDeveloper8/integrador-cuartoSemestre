@@ -13,5 +13,4 @@ public interface ITipoDniService {
 
     void save(TipoDni tipoDni);
 
-    void deleteById(Integer id);
 }

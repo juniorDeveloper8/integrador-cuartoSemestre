@@ -51,4 +51,8 @@ public class Empleado {
 
     @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Medico> medicoList = new ArrayList<>();
+
+    public void desactivarEmpleado() {
+        this.activo = false;
+    }
 }

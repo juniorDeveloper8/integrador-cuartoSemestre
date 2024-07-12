@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IMedicoService {
 
-    List<Medico> findAll();
+    List<Medico> findByActivoTrue();
 
     Optional<Medico> findById(Integer id);
 

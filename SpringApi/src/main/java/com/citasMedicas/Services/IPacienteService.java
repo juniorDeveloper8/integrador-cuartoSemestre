@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IPacienteService {
 
-    List<Paciente> findAll();
+    List<Paciente> findByActivoTrue();
 
     Optional<Paciente> findById(Integer id);
 
