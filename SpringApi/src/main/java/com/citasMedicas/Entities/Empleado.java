@@ -1,5 +1,7 @@
 package com.citasMedicas.Entities;
 
+import com.citasMedicas.DTO.Empleado.EmpleadoSaveDTO;
+import com.citasMedicas.DTO.Empleado.EmpleadoUpdateDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -52,7 +54,43 @@ public class Empleado {
     @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Medico> medicoList = new ArrayList<>();
 
+    // eliminacion logica
     public void desactivarEmpleado() {
         this.activo = false;
     }
+
+
+    // registro de empleado
+    public Empleado(EmpleadoSaveDTO empleadoSaveDTO) {
+       this.activo = true;
+       this.nomEm = empleadoSaveDTO.nomEm();
+       this.apeEm = empleadoSaveDTO.apeEm();
+       this.correoEm = empleadoSaveDTO.correoEm();
+       this.pswEm = empleadoSaveDTO.pswEm();
+       this.dniEm = empleadoSaveDTO.dniEm();
+       this.celEm = empleadoSaveDTO.celEm();
+    }
+
+    // actualizacion de empleado
+    public void actualizarDatos(EmpleadoUpdateDTO empleadoUpdateDTO) {
+        if (empleadoUpdateDTO.nomEm() != null) {
+            this.nomEm = empleadoUpdateDTO.nomEm();
+        }
+
+        if (empleadoUpdateDTO.apeEm() != null) {
+            this.apeEm = empleadoUpdateDTO.apeEm();
+        }
+
+        if (empleadoUpdateDTO.correoEm() != null) {
+            this.correoEm = empleadoUpdateDTO.correoEm();
+        }
+        if (empleadoUpdateDTO.pswEm() != null) {
+            this.pswEm = empleadoUpdateDTO.pswEm();
+        }
+
+        if (empleadoUpdateDTO.celEm() != null) {
+            this.celEm = empleadoUpdateDTO.celEm();
+        }
+    }
+
 }
